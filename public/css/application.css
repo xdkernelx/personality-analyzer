@@ -24,7 +24,8 @@
 
 .right-logout {
   position: relative;
-  right: 5em;
+  left: 5%;
+  bottom: 80%;
 }
 
 footer {
