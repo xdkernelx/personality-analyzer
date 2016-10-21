@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :assessments
 
   validates :username, :email, :hashed_password, { presence: true }
-  validates :email, { uniqueness: true }
+  validates :email, :username, { uniqueness: true }
   validates :email, format: { with: /^[a-zA-Z0-9]+.?[a-zA-Z0-9]*@[a-zA-Z0-9]*.?[a-zA-Z0-9]*.[a-zA-Z]{2,}.?[a-zA-Z]{2,}/, multiline: true }
 
   def password
