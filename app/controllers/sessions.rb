@@ -9,7 +9,7 @@ post '/sessions' do
     @user = User.authenticate_by_username(params[:username], params[:password])
   end
 
-  if @user && @user.id == 20
+  if @user && @user.id == 67
     login(@user)
     redirect '/admin/new'
   elsif @user && @user.assessments.find_by(name: 'Persuasion').completed
