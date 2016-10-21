@@ -5,9 +5,9 @@
 
     <% @ordered.each do |enum| %>
 
-      <span id='result' class='center-align'>
-        <% enum[0].username %> got a <% enum[1].score %><br>
-        <% enum[0].email %>
+      <span id='result'>
+        <p class='center-no-pad'><%= enum[0].username %> got a <%= enum[1].score %></p>
+        <p class='center-no-pad'><%= enum[0].email %></p>
       </span>
 
     <% end %>
