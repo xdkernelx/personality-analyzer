@@ -2,18 +2,12 @@
 
   <% if current_user.id == 67 %>
     <h1 class='center-align'>
-      Hello Admin!<br>
-      <form action="/sessions" method="POST">
+      Hello Admin!
+      <form class='right-logout' action="/sessions" method="POST">
         <input type="hidden" name="_method" value="DELETE">
         <input type="submit" value="Logout">
       </form>
     </h1>
-    <div class='center-no-pad'>
-      <form class='button' action="/sessions" method="POST">
-        <input type="hidden" name="_method" value="DELETE">
-        <input type="submit" value="Logout">
-      </form>
-    </div>
 
     <div id='results'>
       <h3 class='center-no-pad'>Top Performers</h3>

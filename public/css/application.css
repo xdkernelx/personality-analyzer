@@ -22,6 +22,11 @@
   color: red;
 }
 
+.right-logout {
+  position: relative;
+  right: 5em;
+}
+
 footer {
     position: relative;
     bottom: 0;
