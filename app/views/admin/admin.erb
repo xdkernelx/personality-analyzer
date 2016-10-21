@@ -3,6 +3,10 @@
   <% if current_user.id == 67 %>
     <h1 class='center-align'> Hello Admin! </h1>
 
+    <% @ordered.each do |enum| %>
+      
+    <% end %>
+
   <% else %>
     <script type="text/javascript">
       window.location.replace("https://personality-analyzer.herokuapp.com/");
