@@ -4,6 +4,8 @@ helpers do
     email_regex = /^[a-zA-Z0-9]+.?[a-zA-Z0-9]*@[a-zA-Z0-9]*.?[a-zA-Z0-9]*.[a-zA-Z]{2,}.?[a-zA-Z]{2,}$/
     username_regex = /^[a-zA-Z0-9]{6,}$/
 
+    p params[:user]['username']
+
     if User.find_by(email: params[:user]['email'])
       return "That e-mail is already taken."
     elsif User.find_by(username: params[:user]['username'])

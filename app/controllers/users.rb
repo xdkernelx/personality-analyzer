@@ -7,6 +7,15 @@ end
 # USERS CREATE
 post '/users' do
 
+    # This is a duct tape fix
+    if !email_regex.match(params[:user]['email'])
+      return "Invalid email. Please try again."
+    elsif params[:user]['username'].length < 7
+      return "Username must be at least 6 characters."
+    elsif !username_regex.match(params[:user]['username'])
+      return "Invalid username. Alphanumeric characters only."
+    end
+
   if params[:password_confirmation] == params[:user][:password]
     @user = User.new(params[:user])
 
