@@ -4,13 +4,15 @@
     <h1 class='center-align'> Hello Admin! </h1>
 
     <div id='results'>
-      <h4>Top Performers</h4>
+      <h3 class='center-no-pad'>Top Performers</h3>
       <% @ordered.each do |enum| %>
 
         <span id='result'>
           <p class='center-no-pad'><em><%= enum[0].username %></em> got a <%= enum[1].score %></p>
-          <p class='center-no-pad'><strong><%= enum[0].email %></strong></p>
-          <p class='center-no-pad'>________________________________</p>
+          <p class='center-no-pad'>
+            <strong><%= enum[0].email %></strong><br>
+            ________________________________
+          </p>
         </span>
 
       <% end %>
