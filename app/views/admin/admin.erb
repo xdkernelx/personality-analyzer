@@ -3,8 +3,13 @@
   <% if current_user.id == 67 %>
     <h1 class='center-align'> Hello Admin! </h1>
 
-    <% @ordered.each do |enum| %>
-      
+    <% @ordered.each_with_index do |enum, idx| %>
+
+      <span id='result' class='center-align'>
+        <% @ordered[idx][0].username %> got a <% @ordered[idx][1].score %><br>
+        <% @ordered[idx][0].email %>
+      </span>
+
     <% end %>
 
   <% else %>
