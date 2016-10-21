@@ -2,7 +2,7 @@
 
   <% if current_user.id == 67 %>
     <h1 class='center-align'> Hello Admin! </h1>
-    <div class='center-align'>
+    <div class='center-no-pad'>
       <form class='button' action="/sessions" method="POST">
         <input type="hidden" name="_method" value="DELETE">
         <input type="submit" value="Logout">
