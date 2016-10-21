@@ -3,14 +3,18 @@
   <% if current_user.id == 67 %>
     <h1 class='center-align'> Hello Admin! </h1>
 
-    <% @ordered.each do |enum| %>
+    <div id='results'>
+      <h4>Top Performers</h4>
+      <% @ordered.each do |enum| %>
 
-      <span id='result'>
-        <p class='center-no-pad'><%= enum[0].username %> got a <%= enum[1].score %></p>
-        <p class='center-no-pad'><%= enum[0].email %></p>
-      </span>
+        <span id='result'>
+          <p class='center-no-pad'><em><%= enum[0].username %></em> got a <%= enum[1].score %></p>
+          <p class='center-no-pad'><strong><%= enum[0].email %></strong></p>
+          <p class='center-no-pad'>________________________________</p>
+        </span>
 
-    <% end %>
+      <% end %>
+    </div>
 
   <% else %>
     <script type="text/javascript">
