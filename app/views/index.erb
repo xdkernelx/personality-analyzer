@@ -1,6 +1,7 @@
   <header>
     <% if current_user %>
       <div id='nav-online' class='center-align'>
+        <p>View title and picture. Click if it corresponds to your personality.</p>
       </div>
       <div class="assessment">
         <script>
@@ -22,6 +23,7 @@
                     targetElement = $( '#nav-online' )
                     htmlButton = "<a class='button' href='/users/<%= current_user.id %>'>Results</a>";
                     htmlString = "<h3>Click Down to View Your Results</h3>";
+                    targetElement.children().hide();
                     targetElement.append(htmlString);
                     targetElement.append(htmlButton);
                   }, 1000);
