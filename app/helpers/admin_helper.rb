@@ -13,7 +13,7 @@ helpers do
       match_pair << [user, res]
     end
 
-    match_pair
+    match_pair[0, 15]
 
   end
 
