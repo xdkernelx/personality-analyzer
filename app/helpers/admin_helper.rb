@@ -2,6 +2,7 @@ helpers do
 
   def sort_db
 
+    match_pair = []
     elements = Assessment.all
 
     elements = elements.select { |element| !element.score.nil? }
@@ -9,12 +10,10 @@ helpers do
 
     sorted_results.each do |res|
       user = User.find(res.id)
-      p user.username.to_s + ' got a ' + res.score.to_s
-      p user.email.to_s
-      p "*" * 20
+      match_pair << [user, res]
     end
 
-    sorted_results
+    match_pair
 
   end
 
