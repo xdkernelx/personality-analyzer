@@ -8,8 +8,8 @@ class User < ActiveRecord::Base
 
   validates :username, :email, :hashed_password, { presence: true }
   validates :email, :username, { uniqueness: true }
-  validates :email, format: { with: /^[a-zA-Z0-9]+.?[a-zA-Z0-9]*@[a-zA-Z0-9]*.?[a-zA-Z0-9]*.[a-zA-Z]{2,}.?[a-zA-Z]{2,}/, multiline: true }
-
+  validates :email, format: { with: /^[a-zA-Z0-9]+.?[a-zA-Z0-9]*@[a-zA-Z0-9]*.?[a-zA-Z0-9]*.[a-zA-Z]{2,}.?[a-zA-Z]{2,}$/, multiline: true }
+  validates :username, format: { with: /^[a-zA-Z0-9_]{6,}$/, multiline: true }
   def password
     @password ||= Password.new(hashed_password)
   end
